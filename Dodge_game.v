@@ -151,7 +151,7 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 		if(RESETEDGE == 1'b0)begin
 			if(GameOver == 1'b1)begin
 				if(Count == 4'b0001)begin
-					COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b10000001;DATA_B <= 8'b11111111;
+					COMM <= 4'b1000;DATA_R <= 8'b01111110;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 					case({ScoreDigit1} ) //AfterGame Score Display Digit 1
 					4'b0000:begin SegCOM <= 4'b1110;SegDisplay <= 7'b0000001; end
 					4'b0001:begin SegCOM <= 4'b1110;SegDisplay <= 7'b1001111; end
@@ -167,7 +167,7 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 					endcase
 				end
 				else if(Count == 4'b0010)begin
-					COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b10111101;DATA_B <= 8'b11111111;
+					COMM <= 4'b1001;DATA_R <= 8'b10111101;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 					case({ScoreDigit2} ) //AfterGame Score Display Digit 2
 					4'b0000:begin SegCOM <= 4'b1101;SegDisplay <= 7'b0000001; end
 					4'b0001:begin SegCOM <= 4'b1101;SegDisplay <= 7'b1001111; end
@@ -183,7 +183,7 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 					endcase
 				end
 				else if(Count == 4'b0011)begin
-					COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b10100101;DATA_B <= 8'b11111111;
+					COMM <= 4'b1010;DATA_R <= 8'b11011011;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 					case({ScoreDigit3} ) //AfterGame Score Display Digit 3
 					4'b0000:begin SegCOM <= 4'b1011;SegDisplay <= 7'b0000001; end
 					4'b0001:begin SegCOM <= 4'b1011;SegDisplay <= 7'b1001111; end
@@ -199,7 +199,7 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 					endcase
 				end
 				else if(Count == 4'b0100)begin
-					COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b10100001;DATA_B <= 8'b11111111;
+					COMM <= 4'b1011;DATA_R <= 8'b11100111;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 					case({ScoreDigit4} ) //AfterGame Score Display Digit 4
 					4'b0000:begin SegCOM <= 4'b0111;SegDisplay <= 7'b0000001; end
 					4'b0001:begin SegCOM <= 4'b0111;SegDisplay <= 7'b1001111; end
@@ -215,16 +215,16 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 					endcase
 				end
 				else if(Count == 4'b0101)begin
-					COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b11111111;DATA_B <= 8'b10000001;
+					COMM <= 4'b1100;DATA_R <= 8'b11100111;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 				end
 				else if(Count == 4'b0110)begin
-					COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b11111111;DATA_B <= 8'b10111101;
+					COMM <= 4'b1101;DATA_R <= 8'b11011011;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 				end
 				else if(Count == 4'b0111)begin
-					COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b11111111;DATA_B <= 8'b10100101;
+					COMM <= 4'b1110;DATA_R <= 8'b01011101;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 				end
 				else if(Count == 4'b1000)begin
-					COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b11111111;DATA_B <= 8'b10100001;
+					COMM <= 4'b1111;DATA_R <= 8'b01111110;DATA_G <= 8'b11111111;DATA_B <= 8'b11111111;
 				end
 			end
 			else if(Count == 4'b0001)begin
