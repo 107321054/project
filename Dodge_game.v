@@ -229,14 +229,14 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 			end
 			else if(Count == 4'b0001)begin
 				case({Position} ) //Player Position && ScoreDigit1
-					3'b000:begin COMM <= 4'b1000;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1001;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1010;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1011;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1100;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1101;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1110;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1111;DATA_G <= 8'b11111110;DATA_R <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1000;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
+					3'b001:begin COMM <= 4'b1001;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
+					3'b010:begin COMM <= 4'b1010;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
+					3'b011:begin COMM <= 4'b1011;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
+					3'b100:begin COMM <= 4'b1100;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
+					3'b101:begin COMM <= 4'b1101;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
+					3'b110:begin COMM <= 4'b1110;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
+					3'b111:begin COMM <= 4'b1111;DATA_G <= 8'b11111111;DATA_R <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 				case({ScoreDigit1} )
@@ -255,14 +255,14 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 			end
 			else if(Count == 4'b0010)begin
 				case({ObsVecPosition1} ) //RedDot 1 position && ScoreDigit2
-					3'b000:begin COMM <= 4'b1000;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1000;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1000;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1000;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1000;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1000;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1000;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1000;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1000;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 				case({ScoreDigit2} )
@@ -281,14 +281,14 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 			end
 			else if(Count == 4'b0011)begin
 				case({ObsVecPosition2} ) //RedDot 2 position && ScoreDigit3
-					3'b000:begin COMM <= 4'b1001;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1001;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1001;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1001;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1001;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1001;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1001;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1001;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1001;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 				case({ScoreDigit3} )
@@ -307,14 +307,14 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 			end
 			else if(Count == 4'b0100)begin
 				case({ObsVecPosition3} ) //RedDot 3 position && ScoreDigit4
-					3'b000:begin COMM <= 4'b1010;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1010;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1010;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1010;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1010;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1010;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1010;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1010;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1010;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 				case({ScoreDigit4} )
@@ -333,66 +333,66 @@ module DodgeGame(output reg [0:7] DATA_R, DATA_G, DATA_B,
 			end
 			else if(Count == 4'b0101)begin
 				case({ObsVecPosition4} ) //RedDot 4 position
-					3'b000:begin COMM <= 4'b1011;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1011;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1011;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1011;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1011;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1011;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1011;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1011;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1011;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 			end
 			else if(Count == 4'b0110)begin
 				case({ObsVecPosition5} ) //RedDot 5 position
-					3'b000:begin COMM <= 4'b1100;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1100;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1100;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1100;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1100;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1100;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1100;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1100;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1100;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 			end
 			else if(Count == 4'b0111)begin
 				case({ObsVecPosition6} ) //RedDot 6 position
-					3'b000:begin COMM <= 4'b1101;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1101;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1101;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1101;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1101;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1101;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1101;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1101;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1101;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 			end
 			else if(Count == 4'b1000)begin
 				case({ObsVecPosition7} ) //RedDot 7 position
-					3'b000:begin COMM <= 4'b1110;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1110;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1110;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1110;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1110;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1110;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1110;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1110;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1110;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 			end
 			else if(Count == 4'b1001)begin
 				case({ObsVecPosition8} ) //RedDot 8 position
-					3'b000:begin COMM <= 4'b1111;DATA_R <= 8'b01111111;DATA_G <= 8'b11111111; end
-					3'b001:begin COMM <= 4'b1111;DATA_R <= 8'b10111111;DATA_G <= 8'b11111111; end
-					3'b010:begin COMM <= 4'b1111;DATA_R <= 8'b11011111;DATA_G <= 8'b11111111; end
-					3'b011:begin COMM <= 4'b1111;DATA_R <= 8'b11101111;DATA_G <= 8'b11111111; end
-					3'b100:begin COMM <= 4'b1111;DATA_R <= 8'b11110111;DATA_G <= 8'b11111111; end
-					3'b101:begin COMM <= 4'b1111;DATA_R <= 8'b11111011;DATA_G <= 8'b11111111; end
-					3'b110:begin COMM <= 4'b1111;DATA_R <= 8'b11111101;DATA_G <= 8'b11111111; end
-					3'b111:begin COMM <= 4'b1111;DATA_R <= 8'b11111110;DATA_G <= 8'b11111111; end
+					3'b000:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b01111111; end
+					3'b001:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b10111111; end
+					3'b010:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b11011111; end
+					3'b011:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b11101111; end
+					3'b100:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b11110111; end
+					3'b101:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b11111011; end
+					3'b110:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b11111101; end
+					3'b111:begin COMM <= 4'b1111;DATA_R <= 8'b11111111;DATA_G <= 8'b11111110; end
 					default:COMM = COMM;
 				endcase
 			end
